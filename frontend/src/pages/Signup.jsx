@@ -8,7 +8,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const handleSignup = async () => {
-    const response = await fetch('http://localhost:5000/api/auth/signup', {
+    const response = await fetch('https://medicine-2-yidh.onrender.com/api/auth/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password, role })
