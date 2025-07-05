@@ -8,13 +8,13 @@ const Dashboard = () => {
   const [frequency, setFrequency] = useState('');
 
   const fetchMedications = async () => {
-    const res = await fetch(`http://localhost:5000/api/medications/user/${user.id}`);
+    const res = await fetch(`https://medicine-2-yidh.onrender.com/api/medications/user/${user.id}`);
     const data = await res.json();
     setMedications(data);
   };
 
   const addMedication = async () => {
-    const res = await fetch('http://localhost:5000/api/medications/add', {
+    const res = await fetch('https://medicine-2-yidh.onrender.com/api/medications/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ user_id: user.id, name, dosage, frequency })
