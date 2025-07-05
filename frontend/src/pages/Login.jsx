@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    const response = await fetch('https://medicine-2-yidh.onrender.com/api/auth/login', {
+    const response = await fetch('https://medicine-2-yidh.onrender.com/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password })
